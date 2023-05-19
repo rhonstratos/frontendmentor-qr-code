@@ -5,6 +5,8 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
+  env:
+   ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
   steps:
    # https://github.com/actions/checkout
@@ -32,5 +34,3 @@ jobs:
       token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
       branch: gh-pages
       folder: out
-env:
- ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
