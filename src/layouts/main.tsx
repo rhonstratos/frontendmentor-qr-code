@@ -6,7 +6,7 @@ export default function Main() {
 		"Scan the QR code to visit Frontend Mentor and take Your coding skills to the next level";
 	return (
 		<main className=' '>
-			<QrCode title={title} body={body} img='' />
+			<QrCode title={title} body={body} />
 		</main>
 	);
 }

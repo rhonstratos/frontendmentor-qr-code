@@ -1,14 +1,23 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Main from "../layouts/main";
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import Main from '../layouts/main';
+import Head from 'next/head';
 
-const inter = Inter({ subsets: ["latin"] });
+const plusJakartaSans = Plus_Jakarta_Sans({
+	subsets: ['latin'],
+	variable: '--font-plus-jakarta-sans',
+});
 
 export default function Home() {
 	return (
-		<div className='bg-[#d5e1ef] w-full h-screen grid place-content-center'>
+		<div
+			className={
+				'bg-[#d5e1ef] w-full h-screen grid place-content-center font-sans ' +
+				plusJakartaSans.variable
+			}>
+			<Head>
+				<title>QR code component - rhonstratos</title>
+			</Head>
 			<Main />
 		</div>
 	);
 }
-
